@@ -28,6 +28,10 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+      namespace 'com.sstonn.flutter_shazam_kit'
+    }
+    
     compileSdkVersion 31
 
     compileOptions {
